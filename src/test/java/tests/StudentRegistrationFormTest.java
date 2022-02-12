@@ -24,7 +24,7 @@ public class StudentRegistrationFormTest {
         $("#firstName").setValue("Eugene");
         $("#lastName").setValue("Samoilov");
         $("#userEmail").setValue("samoilov@test.ru");
-        $x("//label[@class='custom-control-label' and text()='Male']").click();
+        $(byText("Male")).click();
         $("#userNumber").setValue("1234567890");
 
         // BirthInput
@@ -46,9 +46,7 @@ public class StudentRegistrationFormTest {
         $(byText("NCR")).click();
         $("#city").click();
         $(byText("Delhi")).click();
-
         $("#submit").click();
-
 
         //check:
         $(".table-responsive").shouldHave(
